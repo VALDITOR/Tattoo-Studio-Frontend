@@ -74,6 +74,26 @@ export const Register = () => {
 
   return (
     <div className="registerDesign">
+        <CustomInput
+        design={`inputDesign ${userError.nameError !== "" ? 'inputDesignError' : ''}`}
+        type={"text"}
+        name={"name"}
+        placeholder={""}
+        // value={}
+        functionProp={functionHandler}
+        functionBlur={errorCheck}
+      />
+      <div className='errorMsg'>{userError.nameError}</div>
+      <CustomInput
+        design={`inputDesign ${userError.surnameError !== "" ? 'inputDesignError' : ''}`}
+        type={"text"}
+        name={"Surname"}
+        placeholder={""}
+        // value={}
+        functionProp={functionHandler}
+        functionBlur={errorCheck}
+      />
+      <div className='errorMsg'>{userError.surnameError}</div>
       <CustomInput
         design={`inputDesign ${userError.emailError !== "" ? 'inputDesignError' : ''}`}
         type={"email"}
@@ -94,26 +114,6 @@ export const Register = () => {
         functionBlur={errorCheck}
       />
       <div className='errorMsg'>{userError.passwordError}</div>
-      <CustomInput
-        design={`inputDesign ${userError.nameError !== "" ? 'inputDesignError' : ''}`}
-        type={"text"}
-        name={"name"}
-        placeholder={""}
-        // value={}
-        functionProp={functionHandler}
-        functionBlur={errorCheck}
-      />
-      <div className='errorMsg'>{userError.nameError}</div>
-      <CustomInput
-        design={`inputDesign ${userError.surnameError !== "" ? 'inputDesignError' : ''}`}
-        type={"text"}
-        name={"phone"}
-        placeholder={""}
-        // value={}
-        functionProp={functionHandler}
-        functionBlur={errorCheck}
-      />
-      <div className='errorMsg'>{userError.surnameError}</div>
       <div className='buttonSubmit' onClick={Submit}>Submit</div>
     </div>
   );
