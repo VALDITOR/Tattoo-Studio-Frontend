@@ -2,8 +2,11 @@
 
 import React from 'react';
 import './Home.css'
+import { Header } from '../../common/Header/Header';
 export const Home = () => {
      return (
-         <div className="homeDesign"><img src="https://img1.goodfon.com/wallpaper/nbig/0/ab/tattooist-tattoo-fingers.jpg"/></div>
+         <div className="homeDesign">
+          <Header />  
+         </div>
      )
 }
