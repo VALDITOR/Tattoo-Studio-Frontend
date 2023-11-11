@@ -17,3 +17,8 @@ export const registerUser = async (body) => {
     // return await axios.post(`elendpointdemipreciosobackend`, body);
     return "todo ha ido bien"
 }
+
+export const bringTattoo = async () => {
+
+    return await axios.get(`https://rickandmortyapi.com/api/character/?page=6`);
+}

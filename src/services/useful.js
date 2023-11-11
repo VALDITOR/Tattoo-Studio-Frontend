@@ -1,4 +1,3 @@
-
 export const validator = (type, value) => {
 
     switch(type){
