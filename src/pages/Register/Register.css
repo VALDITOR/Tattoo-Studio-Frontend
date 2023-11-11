@@ -1,16 +1,42 @@
-
-
 .registerDesign {
 
-    height: 84vh;
+    height: 100vh;
     width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-image: url(../../img/pexels-brett-sayles-2121348.jpg);
+}
+
+.registerContainer{
+    height: 80vh;
+    width: 25vw;
+
+    margin-top: 3em;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    background-color: beige;
+    background-color: black;
+
+    opacity: 95%;
+
+    border-radius: 5em;
+
+    border: solid goldenrod 0.25em;
+}
+
+.field{
+    color: white;
 }
 
 .errorMsg {
@@ -23,18 +49,21 @@
     width: 8em;
 
     border-radius: 1em;
-    background-color: crimson;
+    background-color: black;
     color: white;
     font-weight: bolder;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    border: solid white 0.1em;
 }
 
 .buttonSubmit:hover {
 
-    transition: 0.4s;
-    background-color: lightcoral;
+    transition: 0.75s;
+    background-color: goldenrod;
+    color: black;
     cursor: pointer;
 }

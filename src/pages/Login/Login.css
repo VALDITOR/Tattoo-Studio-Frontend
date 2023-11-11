@@ -1,5 +1,3 @@
-
-
 .loginDesign {
 
     height: 84vh;
@@ -11,6 +9,13 @@
     align-items: center;
 
     background-color: beige;
+}
+
+.containerLogin{
+    height: 25vh;
+    width: 25vw;
+
+    background-color: black;
 }
 
 .buttonSubmit {

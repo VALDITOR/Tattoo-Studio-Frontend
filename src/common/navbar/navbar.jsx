@@ -7,6 +7,7 @@ export const Navbar = () => {
 
      return (
          <div className='navbarDesign'>
+            <div className='logo'></div>
             <LinkButton
                 path={"/"}
                 title={"Home"}

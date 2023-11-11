@@ -73,6 +73,8 @@ export const Register = () => {
 
   return (
     <div className="registerDesign">
+      <div className="registerContainer">
+      <div className='field'>NAME</div>
         <CustomInput
         design={`inputDesign ${userError.nameError !== "" ? 'inputDesignError' : ''}`}
         type={"text"}
@@ -83,6 +85,7 @@ export const Register = () => {
         functionBlur={errorCheck}
       />
       <div className='errorMsg'>{userError.nameError}</div>
+      <div className='field'>SURNAME</div>
       <CustomInput
         design={`inputDesign ${userError.surnameError !== "" ? 'inputDesignError' : ''}`}
         type={"text"}
@@ -93,6 +96,7 @@ export const Register = () => {
         functionBlur={errorCheck}
       />
       <div className='errorMsg'>{userError.surnameError}</div>
+      <div className='field'>EMAIL</div>
       <CustomInput
         design={`inputDesign ${userError.emailError !== "" ? 'inputDesignError' : ''}`}
         type={"email"}
@@ -103,6 +107,7 @@ export const Register = () => {
         functionBlur={errorCheck}
       />
       <div className='errorMsg'>{userError.emailError}</div>
+      <div className='field'>PASSWORD</div>
       <CustomInput
         design={`inputDesign ${userError.passwordError !== "" ? 'inputDesignError' : ''}`}
         type={"password"}
@@ -114,6 +119,7 @@ export const Register = () => {
       />
       <div className='errorMsg'>{userError.passwordError}</div>
       <div className='buttonSubmit' onClick={Submit}>Submit</div>
+      </div>
     </div>
   );
 };

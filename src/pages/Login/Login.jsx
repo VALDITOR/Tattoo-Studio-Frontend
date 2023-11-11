@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Login.css";
 import { CustomInput } from "../../common/CustomInput/CustomInput";
+import { validator } from "../../services/useful";
 import { logUser } from "../../services/apiCalls";
 import { useNavigate } from 'react-router-dom';
 
@@ -44,6 +45,7 @@ export const Login = () => {
 
   return (
     <div className="loginDesign">
+      <div className="containerLogin">
       <CustomInput
         design={"inputDesign"}
         type={"email"}
@@ -62,6 +64,7 @@ export const Login = () => {
         functionProp={functionHandler}
         // onBlur={}
       />
+      </div>
       <div className='buttonSubmit' onClick={logMe}>Log Me!</div>
     </div>
   );

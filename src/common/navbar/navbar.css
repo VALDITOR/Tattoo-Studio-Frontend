@@ -1,3 +1,9 @@
+.logo{
+    height: 50em;
+    width: 50em;
+
+    background-image: url(../../img/teel_and_ink-removebg-preview.png);
+}
 .navbarDesign {
 
     height: 10vh;
@@ -14,4 +20,6 @@
 
     color: red;
     font-weight: bold;
+
+    border-bottom: solid white 0.25em;
 }
