@@ -1,16 +1,17 @@
-/* 
-.headerDesign {
+.navbarDesign {
 
     height: 10vh;
     width: 100vw;
 
-    margin-left: 1em;
+    position: relative;
+
+    background-color: black;
 
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
 
-    color: white;
+    color: red;
     font-weight: bold;
-} */
+}
