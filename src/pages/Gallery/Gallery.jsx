@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import './Gallery.css'
 import { bringTattoo } from '../../services/apiCalls';
 import { Container, Row, Col } from "react-bootstrap";
@@ -8,7 +8,7 @@ export const Gallery = () => {
   
     useEffect(() => {
       if (characters.length === 0) {
-        bringCharacters()
+        bringTattoo()
           .then((results) => {
             setCharacters(results.data.results);
           })
@@ -17,7 +17,7 @@ export const Gallery = () => {
     }, [characters]);
   
     return (
-      <div className="homeDesign">
+      <div className="GalleryDesign">
         {characters.length > 0 ? (
           <Container>
             <Row>
