@@ -10,21 +10,29 @@ export const Navbar = () => {
             <div className='navbarPages'>
             <LinkButton
                 path={"/"}
-                title={"Home"}
+                title={"HOME"}
             />
             <LinkButton
                 path={"/gallery"}
-                title={"Gallery"}
+                title={"GALLERY"}
+            />
+            <LinkButton
+                path={"/information"}
+                title={"INFORMATION"}
+            />
+            <LinkButton
+                path={"/appointments"}
+                title={"APPOINTMENTS"}
             />
             </div>
             <div className='navbarProfile'>
             <LinkButton
                 path={"/login"}
-                title={"Login"}
+                title={"SIGN IN"}
             />
             <LinkButton
                 path={"/register"}
-                title={"Register"}
+                title={"SIGN UP"}
             />
             </div>
          </div>

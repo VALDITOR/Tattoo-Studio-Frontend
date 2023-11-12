@@ -14,7 +14,6 @@
 
     font-weight: bold;
 
-    border-bottom: solid darkred 0.25em;
 }
 
 .navbarPages {
@@ -34,6 +33,8 @@
     font-weight: bold;
 
     border-bottom: solid darkred 0.25em;
+
+
 }
 
 .navbarProfile {
@@ -47,4 +48,7 @@
     flex-direction: row;
     justify-content: end;
     align-items: center;
+
+    border-bottom: solid darkred 0.25em;
+
 }
