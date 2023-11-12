@@ -64,8 +64,11 @@ export const Login = () => {
         functionProp={functionHandler}
         // onBlur={}
       />
+      <div className="buttonsLogin">
+        <div className='buttonSubmit' onClick={logMe}>REGISTER</div>
+       <div className='buttonSubmit' onClick={logMe}>LOG IN</div>
       </div>
-      <div className='buttonSubmit' onClick={logMe}>Log Me!</div>
+      </div>
     </div>
   );
 };
