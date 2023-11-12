@@ -30,9 +30,9 @@
 
     opacity: 95%;
 
-    border-radius: 5em;
+    border-radius: 2em;
 
-    border: solid goldenrod 0.25em;
+    border: solid darkred 0.25em;
 }
 
 .field{
@@ -63,7 +63,11 @@
 .buttonSubmit:hover {
 
     transition: 0.75s;
-    background-color: goldenrod;
-    color: black;
+    background-color: darkred;
     cursor: pointer;
+    box-shadow: 0em 0em 1em darkred;
+
+}
+.buttonSubmit:not(:hover){
+    transition: 0.75s;
 }
