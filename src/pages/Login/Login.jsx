@@ -46,6 +46,7 @@ export const Login = () => {
   return (
     <div className="loginDesign">
       <div className="containerLogin">
+      <div className='field'>EMAIL</div>
       <CustomInput
         design={"inputDesign"}
         type={"email"}
@@ -55,6 +56,7 @@ export const Login = () => {
         functionProp={functionHandler}
         // onBlur={}
       />
+      <div className='field'>PASSWORD</div>
       <CustomInput
         design={"inputDesign"}
         type={"password"}

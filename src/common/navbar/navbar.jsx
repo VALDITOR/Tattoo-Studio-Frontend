@@ -7,6 +7,7 @@ export const Navbar = () => {
 
      return (
          <div className='navbarDesign'>
+            <div className='navbarPages'>
             <LinkButton
                 path={"/"}
                 title={"Home"}
@@ -15,6 +16,8 @@ export const Navbar = () => {
                 path={"/gallery"}
                 title={"Gallery"}
             />
+            </div>
+            <div className='navbarProfile'>
             <LinkButton
                 path={"/login"}
                 title={"Login"}
@@ -23,6 +26,7 @@ export const Navbar = () => {
                 path={"/register"}
                 title={"Register"}
             />
+            </div>
          </div>
      )
 }
