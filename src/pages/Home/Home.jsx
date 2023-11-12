@@ -6,7 +6,6 @@ export const Home = () => {
      return (
          <div className="homeDesign">
           <Header />
-            <Logo />
          </div>
      )
 }

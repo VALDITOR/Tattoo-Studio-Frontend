@@ -11,7 +11,8 @@
 
 .linkButtonDesign:hover {
 
-    transition: 0.4s;
-    color: goldenrod;
+    transition: 0.5s;
+    color: red;
     cursor: pointer;
+    text-decoration: underline red;
 }
