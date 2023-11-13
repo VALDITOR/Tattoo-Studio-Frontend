@@ -3,7 +3,6 @@ import './information.css'
 export const Information = () => {
      return (
          <div className="informationDesign">
-            hey
          </div>
      )
 }
