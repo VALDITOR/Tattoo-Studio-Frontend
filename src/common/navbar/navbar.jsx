@@ -38,14 +38,20 @@ export const Navbar = () => {
             />
             </div>
             <div className='navbarProfile'>
-            <LinkButton
-                path={"/login"}
-                title={"SIGN IN"}
-            />
-            <LinkButton
-                path={"/register"}
-                title={"SIGN UP"}
-            />
+            {!rdxCredentials?.credentials.token ? (
+        <>
+          <LinkButton path={"/login"} title={"SIGN IN"} />
+          <LinkButton path={"/register"} title={"SIGN UP"} />
+        </>
+      ) : (
+        <>
+          <LinkButton path={"/profile"} title={rdxCredentials.credentials.firstName} />
+          <div onClick={logOutMe}>
+            <LinkButton path={"/"} title={"SIGN OFF"} /> 
+          </div>
+          <LinkButton path={"/profile"} title={"PROFILE"} />  
+        </>
+      )}
             </div>
          </div>
      )
