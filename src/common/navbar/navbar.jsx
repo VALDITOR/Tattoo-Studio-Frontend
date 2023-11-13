@@ -32,10 +32,15 @@ export const Navbar = () => {
                 path={"/information"}
                 title={"INFORMATION"}
             />
-            <LinkButton
-                path={"/appointments"}
-                title={"APPOINTMENTS"}
-            />
+            {!rdxCredentials?.credentials.token ? (
+    <>
+      <LinkButton path={"/login"} title={"APPOINTMENTS"} />
+    </>
+  ) : (
+    <>
+      <LinkButton path={"/appointments"} title={"APPOINTMENTS"} />  
+    </>
+  )}
             </div>
             <div className='navbarProfile'>
             {!rdxCredentials?.credentials.token ? (
@@ -56,3 +61,5 @@ export const Navbar = () => {
          </div>
      )
 }
+
+
