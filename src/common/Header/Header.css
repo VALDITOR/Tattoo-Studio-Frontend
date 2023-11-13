@@ -1,6 +1,6 @@
 .headerDesign {
 
-    height: 100%;
+    height: 90vh;
     width: 100vw;
 
     background-image: url(../../img/model.jpg);
@@ -8,5 +8,34 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftDesing{
+    height: 100vh;
+    width: 50vw; 
+}
+
+.rightDesing{
+    height: 100vh;
+    width: 50vw; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.logoDesign{
+    /* background-image: url(../../img/teel_and_ink-removebg-preview.png); */
+
+    height: 20em;
+    width: 20em;
+
+    /* background-repeat: no-repeat; */
 }
