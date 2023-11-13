@@ -1,9 +1,21 @@
 import React from 'react'
 import './navbar.css'
 import { LinkButton } from '../LinkButton/LinkButton'
+import { useSelector, useDispatch } from "react-redux";
+import { logout, userData } from "../../pages/userSlice";
 
 export const Navbar = () => {
+    const dispatch = useDispatch();
 
+    const rdxCredentials = useSelector(userData);
+  
+    const logOutMe = () => {
+  
+      dispatch(logout( {credentials : ""}))
+  
+      navigate("/")
+      
+    }
 
      return (
          <div className='navbarDesign'>
