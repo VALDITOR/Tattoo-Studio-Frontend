@@ -1,18 +1,31 @@
 .InfoCardDesign{
-    
 
-    border: solid darkred 0.4em;
+    border: solid darkred 0.25em;
 
     background-color: black;
 
+    height: 70vh;
+    width: 25vw;
+
     max-height: 70vh;
-    max-width: 50wh;
+    max-width: 25vw;
 
     opacity: 95%;
+
+    border-radius: 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 2em;
+    padding-bottom: 2em;
+
 }
 
 .InfoCardLogo{
-    height: 20vh;
+    height: 15vh;
     width: 20vw;
 }
 
@@ -21,6 +34,28 @@
     width: 100%;
 }
 
+.InfoCardTitle{
+    font-size: 2em;
+    color: red;
+
+    /* padding-top: 1em; */
+
+}
+
 .InfoCardText{
-    color:rebeccapurple;
+    color:wheat;
+}
+
+.InfoCardUrl a{
+    color: darkred;
+}
+
+.InfoCardUrl a:hover{
+    transition: 0.5s;
+
+    color: red;
+}
+
+.InfoCardUrl :not(:hover){
+    transition: 0.5s;
 }

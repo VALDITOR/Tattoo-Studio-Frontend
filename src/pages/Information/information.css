@@ -18,7 +18,8 @@ body{
 
     gap: 5em;
 }
+
 .color{
     font-size: 5em;
-    color: goldenrod;
+    color: red;
 }
