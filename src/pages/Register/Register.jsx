@@ -118,7 +118,7 @@ export const Register = () => {
         functionBlur={errorCheck}
       />
       <div className='errorMsg'>{userError.passwordError}</div>
-      <div className='buttonSubmit' onClick={Submit}>SUBMIT</div>
+      <div className='buttonSubmit' onClick={Submit}>REGISTER</div>
       </div>
     </div>
   );
