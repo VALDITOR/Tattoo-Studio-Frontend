@@ -1,0 +1,26 @@
+.InfoCardDesign{
+    
+
+    border: solid darkred 0.4em;
+
+    background-color: black;
+
+    max-height: 70vh;
+    max-width: 50wh;
+
+    opacity: 95%;
+}
+
+.InfoCardLogo{
+    height: 20vh;
+    width: 20vw;
+}
+
+.InfoCardLogo img{
+    height: 100%;
+    width: 100%;
+}
+
+.InfoCardText{
+    color:rebeccapurple;
+}

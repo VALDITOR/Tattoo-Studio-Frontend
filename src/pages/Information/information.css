@@ -11,4 +11,14 @@ body{
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5em;
+}
+.color{
+    font-size: 5em;
+    color: goldenrod;
 }
