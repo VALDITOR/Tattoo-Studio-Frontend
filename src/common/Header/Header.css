@@ -14,12 +14,12 @@
 }
 
 .leftDesing{
-    height: 100vh;
+    height: 90vh;
     width: 50vw; 
 }
 
 .rightDesing{
-    height: 100vh;
+    height: 90vh;
     width: 50vw; 
 
     display: flex;

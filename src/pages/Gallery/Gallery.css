@@ -1,12 +1,16 @@
-.GalleryDesign {
+.homeDesign {
 
     height: 90vh;
     width: 100vw;
 
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     background-color: beige;
+}
+
+.avatarCharacter {
+    height: 8em;
+    width: 8em;
 }

@@ -4,7 +4,7 @@ import { Home } from '../Home/Home';
 import { Login } from '../Login/Login';
 import { Register } from '../Register/Register';
 import { Profile } from '../Profile/Profile';
-import { Gallery } from '../Gallery/gallery';
+import { Gallery } from '../Gallery/Gallery';
 import { Information } from '../Information/information';
 
 export const Body = () => {

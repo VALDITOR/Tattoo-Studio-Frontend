@@ -31,10 +31,6 @@ export const Login = () => {
     console.log("ha ha ha ha");
   }
 
-//   useEffect(()=>{
-//     console.log(credenciales);
-//   },[credenciales]);
-
   const logMe = () => {
 
     logUser(credenciales)
