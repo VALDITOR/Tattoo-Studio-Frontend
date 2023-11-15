@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import "./Login.css";
+import "./WorkerLogin.css";
 import { CustomInput } from "../../common/CustomInput/CustomInput";
 import { validator } from "../../services/useful";
-import { logUser } from "../../services/apiCalls";
+import { logWorker } from "../../services/apiCalls";
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { login } from "../userSlice";
 
-export const Login = () => {
+export const LoginWorker = () => {
 
   const navigate = useNavigate();
 
@@ -33,7 +33,7 @@ export const Login = () => {
 
   const logMe = () => {
 
-    logUser(credenciales)
+    logWorker(credenciales)
         .then(
             resultado => {
                 console.log(resultado)

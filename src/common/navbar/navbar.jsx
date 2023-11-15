@@ -52,7 +52,7 @@ export const Navbar = () => {
         <>
           <LinkButton path={"/profile"} title={rdxCredentials.credentials.firstName} />
           <div onClick={logOutMe}>
-            <LinkButton path={"/"} title={"SIGN OFF"} /> 
+            <LinkButton path={"/"} title={"SIGN OUT"} /> 
           </div>
           <LinkButton path={"/profile"} title={"PROFILE"} />  
         </>
