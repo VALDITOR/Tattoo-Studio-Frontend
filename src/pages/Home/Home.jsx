@@ -6,7 +6,7 @@ export const Home = () => {
          <div className="homeDesign">
             <div className='LeftHome'>
                 <div className='HADivider'>
-                    <HoursAddressCard title="HOURS" text="MON-FRI" subtext="8:00-14:00" />
+                    <HoursAddressCard title="HOURS" text="MON-FRI" subtext="8:00-:14:00" />
                 </div>
                 <div className='HADivider'>
                     <HoursAddressCard title="ADDRESS" text="CW CANADA" subtext="330 FIRST ST" />

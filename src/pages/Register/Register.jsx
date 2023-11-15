@@ -47,6 +47,7 @@ export const Register = () => {
 
     for(let test1 in user){
       if(user[test1] === ""){
+
         return;
       }
 
@@ -89,7 +90,7 @@ export const Register = () => {
       <CustomInput
         design={`inputDesign ${userError.surnameError !== "" ? 'inputDesignError' : ''}`}
         type={"text"}
-        name={"Surname"}
+        name={"surname"}
         placeholder={""}
         // value={}
         functionProp={functionHandler}
