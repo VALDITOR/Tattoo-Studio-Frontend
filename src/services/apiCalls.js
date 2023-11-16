@@ -20,3 +20,8 @@ export const bringTattoo = async () => {
 
     return await axios.get(`http://localhost:5050/gallery/all`);
 }
+
+export const bringProfile = async () => {
+
+    return await axios.get(`https://localhost:5050/customer/profile`);
+}

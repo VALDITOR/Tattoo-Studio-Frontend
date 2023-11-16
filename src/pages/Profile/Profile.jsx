@@ -15,17 +15,16 @@ export const Profile = () => {
 
   //Variables de estado con hook useState en las que voy a guardar los valores de los input
   const [profile, setProfile] = useState({
+    name: datosRdxUser.credentials.name,
+    surname: datosRdxUser.credentials.surname,
     email: datosRdxUser.credentials.email,
-    firstName: datosRdxUser.credentials.firstName,
-    lastName: datosRdxUser.credentials.lastName,
-    gender: datosRdxUser.credentials.gender,
   });
 
   const [profileError, setProfileError] = useState({
+    nameError: '',
+    surnameError: '',
     emailError: '',
-    firstNameError: '',
-    lastNameError: '',
-    genderError: '',
+    passwordError: '',
   });
 
   const [isEnabled, setIsEnabled] = useState(true);
@@ -33,7 +32,6 @@ export const Profile = () => {
   useEffect(() => {
     //RDX se puede seguir como un hook de useState... por lo tanto seguimos
 
-    console.log(datosRdxUser);
   }, [datosRdxUser]);
 
   const errorCheck = (e) => {
@@ -64,15 +62,17 @@ export const Profile = () => {
 
   return (
     <div className="profileDesign">
+      {console.log("hola")};
+      {console.log(profile)};
       <CustomInput
         disabled={isEnabled}
         design={`inputDesign ${
           profileError.firstNameError !== "" ? "inputDesignError" : ""
         }`}
         type={"text"}
-        name={"firstName"}
+        name={"name"}
         placeholder={""}
-        value={profile.firstName}
+        value={profile.name}
         functionProp={functionHandler}
         functionBlur={errorCheck}
       />
@@ -82,9 +82,9 @@ export const Profile = () => {
           profileError.lastNameError !== "" ? "inputDesignError" : ""
         }`}
         type={"text"}
-        name={"lastName"}
+        name={"surname"}
         placeholder={""}
-        value={profile.lastName}
+        value={profile.surname}
         functionProp={functionHandler}
         functionBlur={errorCheck}
       />
@@ -97,18 +97,6 @@ export const Profile = () => {
         name={"email"}
         placeholder={""}
         value={profile.email}
-        functionProp={functionHandler}
-        functionBlur={errorCheck}
-      />
-      <CustomInput
-        disabled={isEnabled}
-        design={`inputDesign ${
-          profileError.genderError !== "" ? "inputDesignError" : ""
-        }`}
-        type={"text"}
-        name={"gender"}
-        placeholder={""}
-        value={profile.gender}
         functionProp={functionHandler}
         functionBlur={errorCheck}
       />
