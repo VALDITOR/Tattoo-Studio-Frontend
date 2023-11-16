@@ -18,5 +18,5 @@ export const registerUser = async (body) => {
 
 export const bringTattoo = async () => {
 
-    return await axios.get(`https://rickandmortyapi.com/api/character/?page=6`);
+    return await axios.get(`http://localhost:5050/gallery/all`);
 }

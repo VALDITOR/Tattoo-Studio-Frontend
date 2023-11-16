@@ -10,9 +10,10 @@ export const Gallery = () => {
     if (characters.length === 0) {
       bringTattoo()
         .then((results) => {
-          setCharacters(results.data.results);
+          setCharacters(results.data.data);
+          console.log(results.data.data);
         })
-        .catch((error) => console.log(error));
+        .catch((error) => console.error(error));
     }
   }, [characters]);
 
