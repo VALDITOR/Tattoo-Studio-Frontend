@@ -8,32 +8,58 @@
     justify-content: center;
     align-items: center;
 
-    background-color: beige;
+    background-image: url("../../img/naked-beauty-elegance-and-sensuality-in-tattoo-generated-by-ai-free-photo.jpg");
+
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.containerProfile{
+    height: 50vh;
+    width: 20vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+
+    opacity: 95%;
+
+    border-radius: 2em;
+
+    border: solid darkred 0.25em;
+
+    color: wheat;
 }
 
 .editDesign {
 
     height: 2em;
-    width: 10em;
+    width: 8em;
 
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: orange;
 
     color: white;
 
     cursor: pointer;
 
     border-radius: 1em;
-    transition: 0.3s;
+    border: solid wheat 0.1em;
+    transition: 0.75s;
+
+    font-size: 1.1em;
 }
 
 .editDesign:hover {
 
-    transition: 0.3s;
-    background-color: darkorange;
+    transition: 0.75s;
+    background-color: darkred;
+    box-shadow: 0em 0em 1em darkred;
 }
 
 .sendDesign {
@@ -44,7 +70,7 @@
     justify-content: center;
     align-items: center;
 
-    background-color: red;
+    background-color: darkred;
 
     color: white;
 
@@ -58,4 +84,10 @@
 
     transition: 0.3s;
     background-color: crimson;
+}
+
+input:disabled{
+    color:black;
+
+    background-color: wheat;
 }

@@ -1,4 +1,4 @@
-.homeDesign {
+.galleryDesign {
 
     height: 90vh;
     width: 100vw;
@@ -7,7 +7,11 @@
     justify-content: center;
     align-items: center;
 
-    background-color: beige;
+    background-image: url(../../img/IMG_5410.jpg);
+    
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .avatarCharacter {

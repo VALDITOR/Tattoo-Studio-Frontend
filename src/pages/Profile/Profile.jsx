@@ -62,8 +62,8 @@ export const Profile = () => {
 
   return (
     <div className="profileDesign">
-      {console.log("hola")};
-      {console.log(profile)};
+      <div className="containerProfile">
+        NAME:
       <CustomInput
         disabled={isEnabled}
         design={`inputDesign ${
@@ -76,6 +76,7 @@ export const Profile = () => {
         functionProp={functionHandler}
         functionBlur={errorCheck}
       />
+      SURNAME:
       <CustomInput
         disabled={isEnabled}
         design={`inputDesign ${
@@ -88,6 +89,7 @@ export const Profile = () => {
         functionProp={functionHandler}
         functionBlur={errorCheck}
       />
+      EMAIL:
       <CustomInput
         disabled={isEnabled}
         design={`inputDesign ${
@@ -102,10 +104,11 @@ export const Profile = () => {
       />
       {
         isEnabled 
-        ? (<div className="editDesign" onClick={()=>setIsEnabled(!isEnabled)}>Edit</div>)
+        ? (<div className="editDesign" onClick={()=>setIsEnabled(!isEnabled)}>MY DATES</div>)
 
         : (<div className="sendDesign" onClick={()=>sendData()}>Send</div>)
       }
+      </div>
     </div>
   );
 };
