@@ -5,16 +5,25 @@
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 
     background-image: url(../../img/IMG_5410.jpg);
     
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
+
+    
 }
 
 .avatarCharacter {
-    height: 8em;
-    width: 8em;
+    height: 12.5em;
+    width: 12.5em;
+
+    border: solid darkred 0.25em;
+
+    border-radius: 1em;
+
+    margin-top: 1em;
+
 }
