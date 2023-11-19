@@ -50,11 +50,10 @@ export const Navbar = () => {
         </>
       ) : (
         <>
-          <LinkButton path={"/profile"} title={rdxCredentials.credentials.firstName} />
+          <LinkButton path={"/profile"} title={rdxCredentials.credentials.name} />
           <div onClick={logOutMe}>
             <LinkButton path={"/"} title={"SIGN OUT"} /> 
           </div>
-          <LinkButton path={"/profile"} title={"PROFILE"} />  
         </>
       )}
             </div>
