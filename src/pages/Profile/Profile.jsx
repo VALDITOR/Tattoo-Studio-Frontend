@@ -49,13 +49,6 @@ export const Profile = () => {
     }));
   }
 
-  const sendData = () => {
-    console.log("wololo")
-    setTimeout(()=>{
-        setIsEnabled(true)
-    }, 1000)
-  }
-
   return (
     <div className="profileDesign">
       <div className="containerProfile">
