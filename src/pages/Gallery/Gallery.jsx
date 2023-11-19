@@ -25,7 +25,7 @@ export const Gallery = () => {
             {characters.map((character) => {
               return (
                 <Col sm={12} lg={6} xl={2} xxl={2} key={character.id}>
-                  <img className='avatarCharacter' src={character.image} alt={character.name} />
+                  <img className='tattooimage' src={character.image} alt={character.name} />
                 </Col>
               );
             })}

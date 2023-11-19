@@ -16,14 +16,26 @@
     
 }
 
-.avatarCharacter {
-    height: 12.5em;
-    width: 12.5em;
+.tattooimage {
+    height: 11.5em;
+    width: 11.5em;
 
     border: solid darkred 0.25em;
 
     border-radius: 1em;
 
     margin-top: 1em;
+
+    transition: 0.75s;
+
+}
+
+.tattooimage:hover{
+    transition: 0.75s;
+
+    height: 12.5em;
+    width: 12.5em;
+
+    box-shadow: 0em 0em 2em red;
 
 }
