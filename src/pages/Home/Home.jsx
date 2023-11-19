@@ -13,7 +13,7 @@ export const Home = () => {
                 </div>
             </div>
             <div className='RightHome'>
-
+                <img src='src\img\tattoo_machines_design__28color_29-removebg-preview.png'></img>
             </div>
          </div>
      )
