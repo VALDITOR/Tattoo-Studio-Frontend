@@ -28,7 +28,6 @@ export const Login = () => {
   };
 
   const errorCheck = () => {
-    console.log("ha ha ha ha");
   }
 
   const logMe = () => {
@@ -36,7 +35,6 @@ export const Login = () => {
     logUser(credenciales)
         .then(
             resultado => {
-                console.log(resultado)
                 dispatch(login({ credentials: resultado.data }))
 
                 setTimeout(()=>{
@@ -75,7 +73,7 @@ export const Login = () => {
         // onBlur={}
       />
       <div className="buttonsLogin">
-        <div className='buttonSubmit' onClick={logMe}>WORKERS</div>
+        <div className='buttonSubmit'><a href="loginworker">WORKERS</a></div>
        <div className='buttonSubmit' onClick={logMe}>LOG IN</div>
       </div>
       </div>
