@@ -75,7 +75,7 @@ export const LoginWorker = () => {
         // onBlur={}
       />
       <div className="buttonsLogin">
-        <div className='buttonSubmit' onClick={logMe}>CUSTOMERS</div>
+      <a href="login"><div className='buttonSubmit'>CUSTOMERS</div></a>
        <div className='buttonSubmit' onClick={logMe}>LOG IN</div>
       </div>
       </div>
