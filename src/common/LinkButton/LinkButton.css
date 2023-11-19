@@ -4,13 +4,15 @@
     color: white;
     font-weight: bolder;
     transition: 0.4s;
-    margin-right: 2em;
+    margin-right: 1em;
+    margin-left: 1em;
     margin-bottom: 0.5em;
 }
 
 .linkButtonDesign:hover {
 
-    transition: 0.4s;
-    color: grey;
+    transition: 0.5s;
+    color: red;
     cursor: pointer;
+    text-decoration: underline red;
 }

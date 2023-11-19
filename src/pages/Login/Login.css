@@ -1,8 +1,6 @@
-
-
 .loginDesign {
 
-    height: 84vh;
+    height: 90vh;
     width: 100vw;
 
     display: flex;
@@ -10,27 +8,38 @@
     justify-content: center;
     align-items: center;
 
-    background-color: beige;
+    background-image: url(../../img/pexels-brett-sayles-2121348.jpg);
+
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
-.buttonSubmit {
+.containerLogin{
+    height: 40vh;
+    width: 25vw;
 
-    height: 3em;
-    width: 8em;
-
-    border-radius: 1em;
-    background-color: crimson;
-    color: white;
-    font-weight: bolder;
+    margin-top: 3em;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    background-color: black;
+
+    opacity: 95%;
+
+    border-radius: 2em;
+
+    border: solid darkred 0.25em;
 }
 
-.buttonSubmit:hover {
+.buttonsLogin{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-    transition: 0.4s;
-    background-color: lightcoral;
-    cursor: pointer;
+    width: 20vw;
 }

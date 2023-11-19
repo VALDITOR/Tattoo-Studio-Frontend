@@ -1,17 +1,24 @@
 import React, { useState, useEffect } from "react";
 import "./Login.css";
 import { CustomInput } from "../../common/CustomInput/CustomInput";
+import { validator } from "../../services/useful";
 import { logUser } from "../../services/apiCalls";
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { login } from "../userSlice";
 
 export const Login = () => {
 
   const navigate = useNavigate();
 
+  const dispatch = useDispatch();
+
   const [credenciales, setCredenciales] = useState({
     email: "",
     password: "",
   });
+
+  const [msgError, setMsgError] = useState('');
 
   const functionHandler = (e) => {
     setCredenciales((prevState) => ({
@@ -20,30 +27,32 @@ export const Login = () => {
     }));
   };
 
-//   useEffect(()=>{
-//     console.log(credenciales);
-//   },[credenciales]);
+  const errorCheck = () => {
+  }
 
   const logMe = () => {
 
     logUser(credenciales)
         .then(
             resultado => {
-                console.log(resultado)
-                //Aqui guardaría el token........
+                dispatch(login({ credentials: resultado.data }))
 
-                //Una vez guardado el token....nos vamos a home....
                 setTimeout(()=>{
                     navigate("/");
                 },500);
             }
         )
-        .catch(error => console.log(error));
+        .catch(error => {
+          console.log(error)
+          setMsgError(error.message);
+        });
 
   }
 
   return (
     <div className="loginDesign">
+      <div className="containerLogin">
+      <div className='field'>EMAIL</div>
       <CustomInput
         design={"inputDesign"}
         type={"email"}
@@ -53,6 +62,7 @@ export const Login = () => {
         functionProp={functionHandler}
         // onBlur={}
       />
+      <div className='field'>PASSWORD</div>
       <CustomInput
         design={"inputDesign"}
         type={"password"}
@@ -62,7 +72,11 @@ export const Login = () => {
         functionProp={functionHandler}
         // onBlur={}
       />
-      <div className='buttonSubmit' onClick={logMe}>Log Me!</div>
+      <div className="buttonsLogin">
+      <a href="loginworker"><div className='buttonSubmit'>WORKERS</div></a>
+       <div className='buttonSubmit' onClick={logMe}>LOG IN</div>
+      </div>
+      </div>
     </div>
   );
 };

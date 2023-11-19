@@ -1,0 +1,35 @@
+.HoursAddressCardDesign{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.HoursAddressTitle{
+    color: red;
+
+    -webkit-text-stroke: 0.02em black;
+
+    /* text-decoration: underline red; */
+
+    font-size: 1.2em;
+
+}
+
+.HoursAddressText{
+    color: white;
+
+    -webkit-text-stroke: 0.02em black;
+
+
+    padding: 0em;
+    margin: 0em;
+
+}
+
+.HoursAddressSubtext{
+    color: black;
+
+    -webkit-text-stroke: 0.02em black;
+
+}
