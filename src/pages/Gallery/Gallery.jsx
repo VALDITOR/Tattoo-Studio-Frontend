@@ -32,7 +32,7 @@ export const Gallery = () => {
           </Row>
         </Container>
       ) : (
-        <div>aun no han venido</div>
+        <div>IMAGES CANNOT BE RECOVERED</div>
       )}
     </div>
   );
