@@ -37,10 +37,8 @@ export const LoginWorker = () => {
         .then(
             resultado => {
                 console.log(resultado)
-                //Aqui guardaría el token........en RDXXX
                 dispatch(login({ credentials: resultado.data }))
 
-                //Una vez guardado el token....nos vamos a home....
                 setTimeout(()=>{
                     navigate("/");
                 },500);

@@ -45,7 +45,6 @@ export const validator = (type, value) => {
                 return "Write 4 characters at least"
             } else {
 
-                //Checking the password format....
 
                 if (! /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z!@#$%^&*]{4,12}$/g.test(value) ) {
                     return "Invalid password format";

@@ -5,15 +5,12 @@ import { CustomInput } from "../../common/CustomInput/CustomInput";
 import { validator } from "../../services/useful";
 
 
-//Importo elementos para conexión a RDX en modo lectura
 import { useSelector } from "react-redux";
 import { userData } from "../userSlice";
 
 export const Profile = () => {
-  //Instancio a RDX en modo lectura
   const datosRdxUser = useSelector(userData);
 
-  //Variables de estado con hook useState en las que voy a guardar los valores de los input
   const [profile, setProfile] = useState({
     name: datosRdxUser.credentials.name,
     surname: datosRdxUser.credentials.surname,
@@ -30,7 +27,6 @@ export const Profile = () => {
   const [isEnabled, setIsEnabled] = useState(true);
 
   useEffect(() => {
-    //RDX se puede seguir como un hook de useState... por lo tanto seguimos
 
   }, [datosRdxUser]);
 

@@ -1,6 +1,5 @@
 
 import './App.css'
-// import { Header } from './common/Header/Header'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Body } from './pages/Body/Body'
 import { Navbar } from './common/navbar/navbar'
