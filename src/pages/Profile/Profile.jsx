@@ -98,12 +98,7 @@ export const Profile = () => {
         functionProp={functionHandler}
         functionBlur={errorCheck}
       />
-      {
-        isEnabled 
-        ? (<div className="editDesign" onClick={()=>setIsEnabled(!isEnabled)}>MY DATES</div>)
-
-        : (<div className="sendDesign" onClick={()=>sendData()}>Send</div>)
-      }
+        <a href="mydates"><div className="editDesign">MY DATES</div></a>
       </div>
     </div>
   );

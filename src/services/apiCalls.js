@@ -26,6 +26,11 @@ export const bringProfile = async () => {
     return await axios.get(`https://localhost:5050/customer/profile`);
 }
 
+export const bringArtistProfile = async () => {
+
+    return await axios.get(`https://localhost:5050/tattoo_artist/profile`);
+}
+
 export const myDates = async (credentials) => {
     return await axios.get('http://localhost:5050/customer/appointment/', {
       headers: { Authorization: `Bearer ${credentials}` }})

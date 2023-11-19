@@ -38,7 +38,7 @@ export const MyDates = () => {
 
   return (
     <div>
-      <h2>Tabla de Citas</h2>
+      <h2>MY DATES</h2>
       <Print appo={appointments} />
     </div>
   );
