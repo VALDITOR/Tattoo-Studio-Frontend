@@ -32,6 +32,7 @@ export const bringArtistProfile = async () => {
 }
 
 export const myDates = async (credentials) => {
+    console.log("token", credentials);
     return await axios.get('http://localhost:5050/customer/appointment/', {
       headers: { Authorization: `Bearer ${credentials}` }})
     }

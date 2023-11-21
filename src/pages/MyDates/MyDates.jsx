@@ -15,9 +15,12 @@ export const MyDates = () => {
     if (!datosRdxUser.credentials) {
       navigate("/");
     } else {
+      console.log("mydates");
       const fetchData = async () => {
         try {
-          const response = await myDates(datosRdxUser.credentials);
+          console.log(datosRdxUser.credentials);
+          const response = await myDates(datosRdxUser.credentials.token);
+          console.log(response);
           if (isMounted) {
             setAppointments(response.data.data);
           }
