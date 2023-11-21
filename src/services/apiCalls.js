@@ -46,3 +46,8 @@ export const getAllCustomers = async (credentials) => {
     return await axios.get('http://localhost:5050/tattoo_artist/customers', {
         headers: { Authorization: `Bearer ${credentials}` }})
     }
+
+export const getAllAppointments = async (credentials) => {
+    return await axios.get('http://localhost:5050/tattoo_artist/appointment', {
+         headers: { Authorization: `Bearer ${credentials}` }})
+    }
