@@ -43,6 +43,6 @@ export const deleteMyDates = async (credentials) => {
     }
 
 export const getAllCustomers = async (credentials) => {
-    return await axios.delete('http://localhost:5050/tattoo_artist/customers', {
+    return await axios.get('http://localhost:5050/tattoo_artist/customers', {
         headers: { Authorization: `Bearer ${credentials}` }})
     }

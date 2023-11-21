@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { userData } from "../../pages/userSlice";
-import { myDates, deleteMyDates } from "../../services/apiCalls";
+import { getAllCustomers } from "../../services/apiCalls";
 
-export const Print = ({ appo }) => {
+export const PrintCustomers = ({ appo }) => {
   const headers = [
-    "Artist Name",
-    "Artist Surname",
-    "Artist Email",
-    "Date",
-    "Actions",
+    "Customer Name",
+    "Customer Surname",
+    "Customer Email"
   ];
 
   const formatDate = (dateString) => {
@@ -31,7 +29,7 @@ export const Print = ({ appo }) => {
 
   const fetchData = async () => {
     try {
-      const response = await myDates(datosRdxUser.credentials);
+      const response = await getAllCustomers(datosRdxUser.credentials);
       setUpdatedAppointments(response.data);
     } catch (error) {
       console.error("Error fetching appointments:", error);
@@ -40,23 +38,7 @@ export const Print = ({ appo }) => {
 
   useEffect(() =>{
     fetchData()
-  }, []);
-
-  const handleDelete = async (id) => {
-    try {
-      await deleteMyDates(datosRdxUser.credentials.token);
-  
-      // Después de la eliminación, actualiza los datos volviendo a llamar a myDates
-      const updatedData = await myDates(datosRdxUser.credentials);
-      setUpdatedAppointments(updatedData.data);
-      fetchData();
-    } catch (error) {
-      console.log(error);
-    }
-
-  };
-
-  
+  }, []);  
 
   return (
     <table>
@@ -71,18 +53,10 @@ export const Print = ({ appo }) => {
         {Array.isArray(appo) &&
           appo.map((appointment) => (
             <tr key={appointment.id}>
-              <td>{appointment.tattoo_artist.name}</td>
-              <td>{appointment.tattoo_artist.surname}</td>
-              <td>{appointment.tattoo_artist.email}</td>
-              <td>{formatDate(appointment.date)}</td>
+              <td>{appointment.name}</td>
+              <td>{appointment.surname}</td>
+              <td>{appointment.email}</td>
               <td>
-              <button
-                        className="delete"
-                        onClick={() => handleDelete(appointment.id)}
-                        
-                      >
-                        Delete
-                      </button>
               </td>
             </tr>
           ))}
