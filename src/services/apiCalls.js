@@ -51,3 +51,11 @@ export const getAllAppointments = async (credentials) => {
     return await axios.get('http://localhost:5050/tattoo_artist/appointment', {
          headers: { Authorization: `Bearer ${credentials}` }})
     }
+
+export const appointments = async (token, appointmentData) => {
+    return await axios.post("http://localhost:5050/appoiments/create", appointmentData,
+        {
+        headers: { Authorization: `Bearer ${token}` },
+        }
+    );
+};
