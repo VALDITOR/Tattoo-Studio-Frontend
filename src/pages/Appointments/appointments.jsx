@@ -28,7 +28,7 @@ export const Appointments = () => {
             const response = await appointments(rdxUserData.credentials.token, appointmentData);
             console.log(response.data);
         } catch (error) {
-            console.error('Error al crear la cita:', error.message);
+            console.error('Error creating the appointment', error.message);
             console.log(rdxUserData.credentials.token);   
             console.log(appointmentData);
         }
@@ -37,8 +37,9 @@ export const Appointments = () => {
 
     return (
         <div className="appointmentsDesign">
-            <div className='new-appointment-div'>
+            <div className='containerAppointment'>
                 <div className='title'>ARTIST</div>
+                <div className='inputAppointment'>
                 <input
                     type='text'
                     name='tattoo_artist_id'
@@ -46,7 +47,9 @@ export const Appointments = () => {
                     value={appointmentData.artist}
                     required
                 ></input>
+                </div>
                 <div className='title'>DATE</div>
+                <div className='inputAppointment'>
                 <input
                     type='datetime-local'
                     name='date'
@@ -54,8 +57,9 @@ export const Appointments = () => {
                     value={appointmentData.date}
                     required
                 ></input>
+                </div>
                 
-                <button onClick={handleCreateAppointment}>CREATE</button>
+                <button onClick={handleCreateAppointment} className='buttonSubmit'>CREATE</button>
             </div>
         </div>
     );
