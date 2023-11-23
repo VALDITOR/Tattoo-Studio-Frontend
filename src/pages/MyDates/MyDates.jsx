@@ -4,6 +4,7 @@ import { myDates } from "../../services/apiCalls";
 import { useNavigate } from "react-router-dom";
 import { userData } from "../userSlice";
 import { Print } from "../../common/MyDatesTable/MyDatesTable";
+import "./MyDates.css";
 
 export const MyDates = () => {
   const navigate = useNavigate();
@@ -40,7 +41,7 @@ export const MyDates = () => {
   }, [datosRdxUser, navigate, isMounted, appointments]);
 
   return (
-    <div>
+    <div className="myDatesDesign">
       <h2>MY DATES</h2>
       <Print appo={appointments} />
     </div>

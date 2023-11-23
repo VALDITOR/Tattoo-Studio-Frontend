@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { userData } from "../../pages/userSlice";
 import { myDates, deleteMyDates } from "../../services/apiCalls";
+import "./MyDatesTable.css";
 
 export const Print = ({ appo }) => {
   const headers = [
@@ -59,6 +60,7 @@ export const Print = ({ appo }) => {
   
 
   return (
+    <div className="myDatesDesign">
     <table>
       <thead>
         <tr>
@@ -88,5 +90,6 @@ export const Print = ({ appo }) => {
           ))}
       </tbody>
     </table>
+    </div>
   );
 };

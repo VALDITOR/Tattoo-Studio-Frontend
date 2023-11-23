@@ -8,8 +8,6 @@ export const Navbar = () => {
     const dispatch = useDispatch();
 
     const rdxCredentials = useSelector(userData);
-
-    console.log("Hola", rdxCredentials.credentials.role);
   
     const logOutMe = () => {
   
