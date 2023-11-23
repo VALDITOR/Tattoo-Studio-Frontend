@@ -4,6 +4,8 @@ import { getAllAppointments } from "../../services/apiCalls";
 import { useNavigate } from "react-router-dom";
 import { userData } from "../userSlice";
 import { PrintAppointments } from "../../common/AllAppointmentsTable/AllAppointmentsTable";
+import "./AllAppointments.css";
+
 
 export const AllAppointments = () => {
   const navigate = useNavigate();
@@ -40,7 +42,7 @@ export const AllAppointments = () => {
   }, [datosRdxUser, navigate, isMounted, appointments]);
 
   return (
-    <div>
+    <div className="allAppointmentsDesign">
       <h2>ALL APPOINTMENTS</h2>
       <PrintAppointments appo={appointments} />
     </div>
