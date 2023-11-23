@@ -83,6 +83,7 @@ All Customers (Only Super Admin)
 
 ## Future functionalities
 ⬜ Add more description to tattoos in appointments
+
 ⬜ Improve appointment validation  
 
 ## Developer
