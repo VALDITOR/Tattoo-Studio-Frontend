@@ -46,7 +46,7 @@ Home
 ![Home](https://github.com/VALDITOR/Tattoo-Studio-Frontend/assets/139993876/cbaa900f-7c88-416b-b8bc-1cec3bef920a)
 
 Gallery
-![Gallery](https://github.com/VALDITOR/Tattoo-Studio-Frontend/assets/139993876/fcb05078-8d8e-431f-94ec-08427a4535bd)
+![Galeria](https://github.com/VALDITOR/Tattoo-Studio-Frontend/assets/139993876/c69f1e05-500c-4d0d-aa72-456d3a82a770)
 
 Information
 ![Information](https://github.com/VALDITOR/Tattoo-Studio-Frontend/assets/139993876/9caf8380-8956-4e98-8d9f-7e1621318980)
@@ -60,14 +60,30 @@ Login Customers
 Login Workers
 ![Captura de pantalla 2023-11-19 213757](https://github.com/VALDITOR/Tattoo-Studio-Frontend/assets/139993876/881cdfc5-51f6-484b-a328-6ce3089f0b3a)
 
-Profile
+User View (Log In Necessary)
+![User view](https://github.com/VALDITOR/Tattoo-Studio-Frontend/assets/139993876/a0869b2d-8d10-4e2e-8922-9bd187b85d44)
+
+Super Admin View (Log In Necessary As Super Admin)
+![Super Admin View](https://github.com/VALDITOR/Tattoo-Studio-Frontend/assets/139993876/d5586455-b3ba-421c-869f-dba12a2ecbf5)
+
+Profile (Log In Necessary)
 ![profile](https://github.com/VALDITOR/Tattoo-Studio-Frontend/assets/139993876/4604dd78-aac9-44b8-8a59-9e5a9d18812e)
 
+Appointments (Log In Necessary)
+![Appointments](https://github.com/VALDITOR/Tattoo-Studio-Frontend/assets/139993876/aea2f064-4d1c-4e4a-8340-dd0694f5f851)
+
+My Dates (Log In Necessary)
+![My Dates ](https://github.com/VALDITOR/Tattoo-Studio-Frontend/assets/139993876/3cb218ea-37e4-48a8-b853-ca56cdaa06e8)
+
+All Appointments (Only Super Admin)
+![AllAppointments](https://github.com/VALDITOR/Tattoo-Studio-Frontend/assets/139993876/b4b63415-90de-4f78-b531-4f01de4a5861)
+
+All Customers (Only Super Admin)
+![AllCustomers](https://github.com/VALDITOR/Tattoo-Studio-Frontend/assets/139993876/ace33ad6-712e-4241-8352-741fc8797b41)
 
 ## Future functionalities
-⬜ Create administrator view  
-⬜ Create and view own appointments as a client  
-⬜ Ability to view all appointments and all clients as an administrator 
+⬜ Add more description to tattoos in appointments
+⬜ Improve appointment validation  
 
 ## Developer
 
