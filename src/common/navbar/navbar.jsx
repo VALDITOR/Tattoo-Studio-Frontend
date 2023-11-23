@@ -41,6 +41,12 @@ export const Navbar = () => {
       <LinkButton path={"/appointments"} title={"APPOINTMENTS"} />  
     </>
   )}
+  {rdxCredentials.credentials.role === "super_admin" &&(
+        <LinkButton path={"/allappointments"} title={"ALL APPOINTMENTS"} />  
+      )}
+    {rdxCredentials.credentials.role === "super_admin" &&(
+        <LinkButton path={"/allcustomers"} title={"ALL CUSTOMERS"} />  
+      )}
             </div>
             <div className='navbarProfile'>
             {!rdxCredentials?.credentials.token ? (

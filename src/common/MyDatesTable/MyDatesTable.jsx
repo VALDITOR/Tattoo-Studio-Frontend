@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { userData } from "../../pages/userSlice";
 import { myDates, deleteMyDates } from "../../services/apiCalls";
+import "./MyDatesTable.css";
 
 export const Print = ({ appo }) => {
   const headers = [
-    "Tattoo Artist Name",
-    "Tattoo Artist Surname",
-    "Tattoo Artist Email",
+    "Artist Name",
+    "Artist Surname",
+    "Artist Email",
     "Date",
-    "Status",
     "Actions",
   ];
 
@@ -28,7 +28,8 @@ export const Print = ({ appo }) => {
 
   const datosRdxUser = useSelector(userData);
   const [updatedAppointments, setUpdatedAppointments] = useState([]);
-  
+
+
   const fetchData = async () => {
     try {
       const response = await myDates(datosRdxUser.credentials);
@@ -38,17 +39,28 @@ export const Print = ({ appo }) => {
     }
   };
 
-  const handleDelete = (appointmentId) => {
-    deleteMyDates(datosRdxUser.credentials)
-      .then(() => {
-        fetchData();
-      })
-      .catch((error) => {
-        console.error("Error al eliminar la cita:", error);
-      });
+  useEffect(() =>{
+    fetchData()
+  }, []);
+
+  const handleDelete = async (id) => {
+    try {
+      await deleteMyDates(datosRdxUser.credentials.token);
+  
+      // Después de la eliminación, actualiza los datos volviendo a llamar a myDates
+      const updatedData = await myDates(datosRdxUser.credentials);
+      setUpdatedAppointments(updatedData.data);
+      fetchData();
+    } catch (error) {
+      console.log(error);
+    }
+
   };
 
+  
+
   return (
+    <div className="myDatesDesign">
     <table>
       <thead>
         <tr>
@@ -59,24 +71,25 @@ export const Print = ({ appo }) => {
       </thead>
       <tbody>
         {Array.isArray(appo) &&
-          appo.map((user) => (
-            <tr key={user.id}>
-              <td>{user.user_name}</td>
-              <td>{user.tattoo_artist_name}</td>
-              <td>{user.work}</td>
-              <td>{user.name}</td>
-              <td>{user.description}</td>
-              <td>{user.price}</td>
-              <td>{formatDate(user.date)}</td>
-              <td>{user.status}</td>
+          appo.map((appointment) => (
+            <tr key={appointment.id}>
+              <td>{appointment.tattoo_artist.name}</td>
+              <td>{appointment.tattoo_artist.surname}</td>
+              <td>{appointment.tattoo_artist.email}</td>
+              <td>{formatDate(appointment.date)}</td>
               <td>
-                <button onClick={() => handleDelete(user.id)}>
-                  Eliminar
-                </button>
+              <button
+                        className="delete"
+                        onClick={() => handleDelete(appointment.id)}
+                        
+                      >
+                        Delete
+                      </button>
               </td>
             </tr>
           ))}
       </tbody>
     </table>
+    </div>
   );
 };

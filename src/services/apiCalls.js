@@ -32,6 +32,7 @@ export const bringArtistProfile = async () => {
 }
 
 export const myDates = async (credentials) => {
+    console.log("token", credentials);
     return await axios.get('http://localhost:5050/customer/appointment/', {
       headers: { Authorization: `Bearer ${credentials}` }})
     }
@@ -42,6 +43,19 @@ export const deleteMyDates = async (credentials) => {
     }
 
 export const getAllCustomers = async (credentials) => {
-    return await axios.delete('http://localhost:5050/tattoo_artist/customers', {
+    return await axios.get('http://localhost:5050/tattoo_artist/customers', {
         headers: { Authorization: `Bearer ${credentials}` }})
     }
+
+export const getAllAppointments = async (credentials) => {
+    return await axios.get('http://localhost:5050/tattoo_artist/appointment', {
+         headers: { Authorization: `Bearer ${credentials}` }})
+    }
+
+export const appointments = async (token, appointmentData) => {
+    return await axios.post("http://localhost:5050/appoiments/create", appointmentData,
+        {
+        headers: { Authorization: `Bearer ${token}` },
+        }
+    );
+};

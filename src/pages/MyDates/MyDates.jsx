@@ -4,6 +4,7 @@ import { myDates } from "../../services/apiCalls";
 import { useNavigate } from "react-router-dom";
 import { userData } from "../userSlice";
 import { Print } from "../../common/MyDatesTable/MyDatesTable";
+import "./MyDates.css";
 
 export const MyDates = () => {
   const navigate = useNavigate();
@@ -15,9 +16,12 @@ export const MyDates = () => {
     if (!datosRdxUser.credentials) {
       navigate("/");
     } else {
+      console.log("mydates");
       const fetchData = async () => {
         try {
-          const response = await myDates(datosRdxUser.credentials);
+          console.log(datosRdxUser.credentials);
+          const response = await myDates(datosRdxUser.credentials.token);
+          console.log(response);
           if (isMounted) {
             setAppointments(response.data.data);
           }
@@ -37,7 +41,7 @@ export const MyDates = () => {
   }, [datosRdxUser, navigate, isMounted, appointments]);
 
   return (
-    <div>
+    <div className="myDatesDesign">
       <h2>MY DATES</h2>
       <Print appo={appointments} />
     </div>
