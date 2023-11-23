@@ -46,7 +46,7 @@ Home
 ![Home](https://github.com/VALDITOR/Tattoo-Studio-Frontend/assets/139993876/cbaa900f-7c88-416b-b8bc-1cec3bef920a)
 
 Gallery
-![Galeria](https://github.com/VALDITOR/Tattoo-Studio-Frontend/assets/139993876/c69f1e05-500c-4d0d-aa72-456d3a82a770)
+![Galeria](https://github.com/VALDITOR/Tattoo-Studio-Frontend/assets/139993876/aa4871b1-3ad1-4e53-a11b-e2cb81facb92)
 
 Information
 ![Information](https://github.com/VALDITOR/Tattoo-Studio-Frontend/assets/139993876/9caf8380-8956-4e98-8d9f-7e1621318980)
