@@ -49,6 +49,8 @@ export const Profile = () => {
     }));
   }
 
+  console.log(datosRdxUser.credentials.token);
+
   return (
     <div className="profileDesign">
       <div className="containerProfile">

@@ -36,6 +36,7 @@ export const Login = () => {
         .then(
             resultado => {
                 dispatch(login({ credentials: resultado.data }))
+                console.log(resultado.data.token);
 
                 setTimeout(()=>{
                     navigate("/");
